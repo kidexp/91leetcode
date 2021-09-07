@@ -8,7 +8,7 @@ class Solution:
                 while j < len(s) and s[j].isdigit():
                     j += 1
                 stack.append(int(s[i:j]))
-                i = j-1
+                i = j - 1
             elif s[i] == "]":
                 temp_str = ""
                 while stack and stack[-1] != "[":
