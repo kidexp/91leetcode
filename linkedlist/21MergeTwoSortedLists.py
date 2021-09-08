@@ -3,6 +3,8 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy_head = ListNode()
@@ -31,6 +33,7 @@ def iterate_linked_list(head):
     print("")
     print("===============")
 
+
 if __name__ == "__main__":
     solution = Solution()
     l1 = ListNode(1)
@@ -38,4 +41,4 @@ if __name__ == "__main__":
     l1.next.next = ListNode(6)
     l2 = ListNode(2)
     l2.next = ListNode(3)
-    iterate_linked_list(solution.mergeTwoLists(l1,l2))
+    iterate_linked_list(solution.mergeTwoLists(l1, l2))
