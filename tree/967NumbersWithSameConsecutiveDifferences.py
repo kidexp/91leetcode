@@ -26,6 +26,25 @@ class Solution:
         dfs(n)
         return result
 
+    def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
+        result = []
+        single_solution = []
+
+        def dfs(digit):
+            single_solution.append(digit)
+            if len(single_solution) < n:
+                if 10 > digit + k >= 0:
+                    dfs(digit + k)
+                if k > 0 and 10 > digit - k >= 0:
+                    dfs(digit - k)
+            if len(single_solution) == n:
+                result.append(int("".join((str(item) for item in single_solution))))
+            single_solution.pop()
+
+        for i in range(1, 10):
+            dfs(i)
+        return result
+
 
 if __name__ == "__main__":
     solution = Solution()
