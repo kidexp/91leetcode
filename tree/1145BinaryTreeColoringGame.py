@@ -53,4 +53,3 @@ if __name__ == "__main__":
     root.left = TreeNode(2)
     root.right = TreeNode(3)
     print(solution.btreeGameWinningMove(root=root, n=3, x=1))
-
