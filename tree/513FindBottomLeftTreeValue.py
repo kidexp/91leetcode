@@ -15,8 +15,7 @@ class Solution:
         queue = deque([root])
         while queue:
             queue_size = len(queue)
-            if queue:
-                last_left_most_value = queue[0].val
+            last_left_most_value = queue[0].val
             for _ in range(queue_size):
                 node = queue.pop()
                 if node.right:
